@@ -3,8 +3,8 @@
 %global shimdir %{_builddir}/%{name}-%{version}-shim
 %global optflags %{optflags} -I%{shimdir}
 %global optflags %(echo %{optflags} | sed -e 's/-flto[^ ]*//g')
-%global _debuginfo_subpackages 0
-%global debug_package %{nil}.
+%define _enable_debug_packages %{nil}
+%define debug_package %{nil}
 
 Name:           ayugram-desktop
 Version:        7.2.9
